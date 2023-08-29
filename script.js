@@ -1,34 +1,34 @@
 // String methods
 const str = 'Hello, World!';
-console.log('String Length:', str.length);
-console.log('Uppercase:', str.toUpperCase());
-console.log('Lowercase:', str.toLowerCase());
-console.log('Substring:', str.substring(0, 5));
-console.log('Index of "World":', str.indexOf('World'));
+document.getElementById('stringLength').textContent = `String Length: ${str.length}`;
+document.getElementById('uppercase').textContent = `Uppercase: ${str.toUpperCase()}`;
+document.getElementById('lowercase').textContent = `Lowercase: ${str.toLowerCase()}`;
+document.getElementById('substring').textContent = `Substring: ${str.substring(0, 5)}`;
+document.getElementById('indexOf').textContent = `Index of "World": ${str.indexOf('World')}`;
 
 // Number methods
 const num = 123.456;
-console.log('Fixed to 2 decimal places:', num.toFixed(2));
-console.log('Converted to string:', num.toString());
-console.log('Exponential notation:', num.toExponential(2));
-console.log('Rounded:', Math.round(num));
-console.log('Square root:', Math.sqrt(num));
+document.getElementById('toFixed').textContent = `Fixed to 2 decimal places: ${num.toFixed(2)}`;
+document.getElementById('toString').textContent = `Converted to string: ${num.toString()}`;
+document.getElementById('toExponential').textContent = `Exponential notation: ${num.toExponential(2)}`;
+document.getElementById('round').textContent = `Rounded: ${Math.round(num)}`;
+document.getElementById('sqrt').textContent = `Square root: ${Math.sqrt(num)}`;
 
 // Array methods
 const arr = [1, 2, 3, 4, 5];
-console.log('Array Length:', arr.length);
-console.log('First element:', arr[0]);
-console.log('Last element:', arr[arr.length - 1]);
-console.log('Array joined as string:', arr.join(', '));
-console.log('Array reversed:', arr.reverse());
+document.getElementById('arrayLength').textContent = `Array Length: ${arr.length}`;
+document.getElementById('firstElement').textContent = `First element: ${arr[0]}`;
+document.getElementById('lastElement').textContent = `Last element: ${arr[arr.length - 1]}`;
+document.getElementById('arrayJoined').textContent = `Array joined as string: ${arr.join(', ')}`;
+document.getElementById('arrayReversed').textContent = `Array reversed: ${arr.reverse()}`;
 
 // Date methods
 const currentDate = new Date();
-console.log('Current Date:', currentDate);
-console.log('Day of the week:', currentDate.getDay());
-console.log('Month:', currentDate.getMonth());
-console.log('Year:', currentDate.getFullYear());
-console.log('Time:', currentDate.toLocaleTimeString());
+document.getElementById('currentDate').textContent = `Current Date: ${currentDate}`;
+document.getElementById('dayOfWeek').textContent = `Day of the week: ${currentDate.getDay()}`;
+document.getElementById('month').textContent = `Month: ${currentDate.getMonth()}`;
+document.getElementById('year').textContent = `Year: ${currentDate.getFullYear()}`;
+document.getElementById('time').textContent = `Time: ${currentDate.toLocaleTimeString()}`;
 
 // Function methods (Weather Forecast Example)
 function getWeather(city) {
@@ -41,10 +41,6 @@ function getWeather(city) {
   return weatherData;
 }
 
-function displayWeather(city, temperature, condition) {
-  console.log(`Weather in ${city}: ${temperature}°C, ${condition}`);
-}
-
 const city = 'New York';
 const weatherInfo = getWeather(city);
-displayWeather(weatherInfo.city, weatherInfo.temperature, weatherInfo.condition);
+document.getElementById('weatherInfo').textContent = `Weather in ${weatherInfo.city}: ${weatherInfo.temperature}°C, ${weatherInfo.condition}`;

@@ -41,6 +41,19 @@ function getWeather(city) {
   return weatherData;
 }
 
+function displayWeatherInfo(city, temperature, condition) {
+  document.getElementById('weatherInfo').textContent = `Weather in ${city}: ${temperature}°C, ${condition}`;
+}
+
 const city = 'New York';
 const weatherInfo = getWeather(city);
-document.getElementById('weatherInfo').textContent = `Weather in ${weatherInfo.city}: ${weatherInfo.temperature}°C, ${weatherInfo.condition}`;
+displayWeatherInfo(weatherInfo.city, weatherInfo.temperature, weatherInfo.condition);
+
+// New function to calculate the square of a number
+function squareNumber(number) {
+  return number * number;
+}
+
+const numberToSquare = 5;
+const squaredNumber = squareNumber(numberToSquare);
+document.getElementById('squaredNumber').textContent = `Square of ${numberToSquare}: ${squaredNumber}`;
